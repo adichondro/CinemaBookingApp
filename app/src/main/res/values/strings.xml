@@ -46,4 +46,6 @@
     <string name="lihat_tiket">Lihat Tiket</string>
     <string name="happy_watch">Happy Watching</string>
     <string name="items">Items</string>
+    <string name="close">Close</string>
+    <string name="dialog_qr_text">Silahkan melakukan scanning pada counter tiket terdekat</string>
 </resources>

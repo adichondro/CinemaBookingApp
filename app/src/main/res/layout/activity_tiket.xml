@@ -8,7 +8,7 @@
     tools:context=".home.tiket.TiketActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/iv_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,7 +27,7 @@
         android:src="@color/colorWhite" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/iv_barcode"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
@@ -67,7 +67,7 @@
         android:background="@drawable/shape_rectangle_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+        app:layout_constraintTop_toBottomOf="@+id/iv_back">
 
         <ImageView
             android:id="@+id/iv_poster_image"

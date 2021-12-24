@@ -67,7 +67,7 @@ class DashboardFragment : Fragment() {
             .getReference("Film")
 
         tv_nama.text = preferences.getValues("nama")
-        if (preferences.getValues("saldo").equals("")){
+        if (!preferences.getValues("saldo").equals("")){
             currency(preferences.getValues("saldo")!!.toDouble(), tv_saldo)
         }
         Glide.with(this)

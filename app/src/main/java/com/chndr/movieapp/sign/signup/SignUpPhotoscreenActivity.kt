@@ -29,13 +29,13 @@ import java.util.*
 
 class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
 
-    val REQUEST_IMAGE_CAPTURE = 1
-    var statusAdd: Boolean = false
-    lateinit var filePath: Uri
+    private val REQUEST_IMAGE_CAPTURE = 1
+    private var statusAdd: Boolean = false
+    private lateinit var filePath: Uri
 
     lateinit var preferences: Preferences
-    lateinit var storage: FirebaseStorage
-    lateinit var storageReference: StorageReference
+    private lateinit var storage: FirebaseStorage
+    private lateinit var storageReference: StorageReference
 
     lateinit var user: User
     private lateinit var mFirebaseDatabase: DatabaseReference
@@ -79,6 +79,7 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
             startActivity(goHome)
         }
 
+
         btn_save.setOnClickListener {
             if (filePath != null) {
                 var progressDialog = ProgressDialog(this)
@@ -117,7 +118,7 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
 
                 preferences.setValues("nama", user.nama.toString())
                 preferences.setValues("user", user.username.toString())
-                preferences.setValues("saldo","")
+                preferences.setValues("saldo", user.saldo.toString())
                 preferences.setValues("url", "")
                 preferences.setValues("email", user.email.toString())
                 preferences.setValues("status", "1")
@@ -176,22 +177,26 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
 //    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            //Image Uri will not be null for RESULT_OK
-            statusAdd = true
-            filePath = data?.data!!
+        when (resultCode) {
+            Activity.RESULT_OK -> {
+                //Image Uri will not be null for RESULT_OK
+                statusAdd = true
+                filePath = data?.data!!
 
-            Glide.with(this)
-                .load(filePath)
-                .apply(RequestOptions.circleCropTransform())
-                .into(iv_profile)
+                Glide.with(this)
+                    .load(filePath)
+                    .apply(RequestOptions.circleCropTransform())
+                    .into(iv_profile)
 
-            btn_save.visibility = View.VISIBLE
-            iv_add.setImageResource(R.drawable.ic_btn_delete)
-        } else if (resultCode == ImagePicker.RESULT_ERROR) {
-            Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
+                btn_save.visibility = View.VISIBLE
+                iv_add.setImageResource(R.drawable.ic_btn_delete)
+            }
+            ImagePicker.RESULT_ERROR -> {
+                Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

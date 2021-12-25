@@ -12,13 +12,14 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
-    lateinit var sUsername: String
-    lateinit var sPassword: String
-    lateinit var sNama: String
-    lateinit var sEmail: String
+    private lateinit var sUsername: String
+    private lateinit var sPassword: String
+    private lateinit var sNama: String
+    private lateinit var sEmail: String
+    private lateinit var sSaldo: String
 
     lateinit var mFirebaseDatabase: DatabaseReference
-    lateinit var mFirebaseInstance: FirebaseDatabase
+    private lateinit var mFirebaseInstance: FirebaseDatabase
 
     lateinit var preferences: Preferences
 
@@ -36,6 +37,7 @@ class SignUpActivity : AppCompatActivity() {
             sPassword = et_password.text.toString()
             sNama = et_nama.text.toString()
             sEmail = et_email.text.toString()
+            sSaldo = "0"
 
             if (sUsername.equals("")) {
                 et_username.error = "Silahkan Isi Username Anda"
@@ -55,20 +57,26 @@ class SignUpActivity : AppCompatActivity() {
                     et_username.error = "Silahkan tulis Username Anda tanpa ."
                     et_username.requestFocus()
                 } else {
-                    saveUser(sUsername, sPassword, sNama, sEmail)
+                    saveUser(sUsername, sPassword, sNama, sEmail, sSaldo)
                 }
             }
 
         }
+        iv_back.setOnClickListener{
+            finish()
+        }
+
     }
 
 
-    private fun saveUser(sUsername: String, sPassword: String, sNama: String, sEmail: String) {
+    private fun saveUser(sUsername: String, sPassword: String, sNama: String, sEmail: String, sSaldo: String) {
         val user = User()
         user.email = sEmail
         user.username = sUsername
         user.nama = sNama
         user.password = sPassword
+        user.saldo = sSaldo
+
 
         if (sUsername != null) {
             checkingUsername(sUsername, user)
@@ -86,7 +94,7 @@ class SignUpActivity : AppCompatActivity() {
 
                         preferences.setValues("nama", data.nama.toString())
                         preferences.setValues("user", data.username.toString())
-                        preferences.setValues("saldo", "")
+                        preferences.setValues("saldo", data.saldo.toString())
                         preferences.setValues("url", "")
                         preferences.setValues("email", data.email.toString())
                         preferences.setValues("status", "1")

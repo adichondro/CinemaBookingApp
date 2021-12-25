@@ -51,7 +51,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         btn_daftar.setOnClickListener{
-            var goSignup = Intent(this@SignInActivity, SignUpActivity::class.java)
+            val goSignup = Intent(this@SignInActivity, SignUpActivity::class.java)
             startActivity(goSignup)
         }
     }

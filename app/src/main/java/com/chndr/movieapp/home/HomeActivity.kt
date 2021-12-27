@@ -6,6 +6,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.chndr.movieapp.R
 import com.chndr.movieapp.home.dashboard.DashboardFragment
+import com.chndr.movieapp.home.setting.SettingFragment
 import com.chndr.movieapp.home.tiket.TiketFragment
 import kotlinx.android.synthetic.main.activity_home.*
 

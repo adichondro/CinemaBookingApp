@@ -11,7 +11,6 @@ import com.chndr.movieapp.model.Checkout
 import com.chndr.movieapp.model.Film
 import com.chndr.movieapp.utils.Preferences
 import kotlinx.android.synthetic.main.activity_checkout.*
-import kotlinx.android.synthetic.main.activity_pilih_bangku.*
 
 class CheckoutActivity : AppCompatActivity() {
 
@@ -39,6 +38,10 @@ class CheckoutActivity : AppCompatActivity() {
             val intent = Intent(this, CheckoutSuccessActivity::class.java)
             startActivity(intent)
         }
+        iv_back.setOnClickListener {
+            finish()
+        }
+
     }
 
 }

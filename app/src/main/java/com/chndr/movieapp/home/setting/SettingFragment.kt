@@ -1,4 +1,4 @@
-package com.chndr.movieapp.home
+package com.chndr.movieapp.home.setting
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

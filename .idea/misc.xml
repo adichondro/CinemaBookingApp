@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable-v24/shape_rectangle_blue_grey.xml" value="0.16822916666666668" />
+        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/ic_btn_delete.xml" value="0.15208333333333332" />
+        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/ic_btn_upload.xml" value="0.15208333333333332" />
+        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/ic_key.xml" value="0.15208333333333332" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/ic_rectangle_21.xml" value="0.16979166666666667" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/shape_background_blue.xml" value="0.15677083333333333" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/shape_eclipse.xml" value="0.22552083333333334" />
@@ -15,11 +18,12 @@
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/shape_rectangle_blue_grey_right.xml" value="0.15833333333333333" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/shape_rectangle_pink.xml" value="0.16822916666666668" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/drawable/shape_rectangle_white.xml" value="0.15833333333333333" />
+        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_change_password.xml" value="0.25" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_checkout.xml" value="0.33" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_checkout_success.xml" value="0.1381340579710145" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_edit_ profile.xml" value="0.2" />
-        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_edit_profile.xml" value="0.1" />
+        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_edit_profile.xml" value="0.22" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_history.xml" value="0.16077898550724637" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_home.xml" value="0.16" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_my_wallet.xml" value="0.22" />
@@ -29,7 +33,7 @@
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_pilih_bangku.xml" value="0.18" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
-        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_sign_up_photoscreen.xml" value="0.16" />
+        <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_sign_up_photoscreen.xml" value="0.14" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.14" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/activity_tiket.xml" value="0.5" />
         <entry key="..\:/Pemrograman/AndroidStudioProject/MovieApp/app/src/main/res/layout/dialog_qr.xml" value="0.22" />

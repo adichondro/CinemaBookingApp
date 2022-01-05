@@ -48,4 +48,12 @@
     <string name="items">Items</string>
     <string name="close">Close</string>
     <string name="dialog_qr_text">Silahkan melakukan scanning pada counter tiket terdekat</string>
+    <string name="change_password">Change Password</string>
+    <string name="settings">Settings</string>
+    <string name="keep_it_up_to_date">Keep it up to date</string>
+    <string name="change_language">Change Language</string>
+    <string name="help">Help</string>
+    <string name="password_lama">Password Lama</string>
+    <string name="password_baru">Password Baru</string>
+    <string name="simpan_password">Simpan Password</string>
 </resources>

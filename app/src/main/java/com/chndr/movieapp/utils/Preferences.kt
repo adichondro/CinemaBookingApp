@@ -8,7 +8,7 @@ class Preferences(val context: Context) {
         const val MEETING_PREF = "USER_PREF"
     }
 
-    val sharedPref = context.getSharedPreferences(MEETING_PREF, 0)
+    private val sharedPref: SharedPreferences = context.getSharedPreferences(MEETING_PREF, 0)
 
     fun setValues(key: String, value: String) {
         val editor: SharedPreferences.Editor = sharedPref.edit()

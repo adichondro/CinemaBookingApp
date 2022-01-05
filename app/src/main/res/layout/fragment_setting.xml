@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Settings"
+        android:text="@string/settings"
         android:textColor="@color/colorWhite"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Keep it up to date"
+        android:text="@string/keep_it_up_to_date"
         android:textColor="@color/colorWhiteGrey"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,22 +48,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Sativa Oriza"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+        tools:text="Sativa Oriza"/>
 
     <TextView
         android:id="@+id/tv_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sativa@mail.com"
         android:textColor="@color/colorWhiteGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_nama" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_nama"
+        tools:text="test@mail.com"/>
 
     <TextView
         android:id="@+id/tv_my_wallet"
@@ -91,35 +91,49 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
-        app:drawableLeftCompat="@drawable/ic_account_balance_wallet_24px" />
+        app:drawableLeftCompat="@drawable/ic_account_circle" />
 
     <TextView
-        android:id="@+id/tv_edit_profile2"
+        android:id="@+id/tv_change_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:drawablePadding="10dp"
-        android:text="Change Language"
+        android:text="@string/change_password"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:drawableLeftCompat="@drawable/ic_account_balance_wallet_24px" />
+        app:drawableLeftCompat="@drawable/ic_key" />
 
     <TextView
-        android:id="@+id/tv_edit_profile3"
+        android:id="@+id/tv_change_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:drawablePadding="10dp"
-        android:text="Help"
+        android:text="@string/change_language"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3"
-        app:drawableLeftCompat="@drawable/ic_account_balance_wallet_24px" />
+        app:drawableLeftCompat="@drawable/ic_flag" />
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="10dp"
+        android:text="@string/help"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:drawableLeftCompat="@drawable/ic_help" />
 
     <View
         android:id="@+id/view"
@@ -154,5 +168,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_edit_profile2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_change_password" />
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_change_language" />
 </androidx.constraintlayout.widget.ConstraintLayout>

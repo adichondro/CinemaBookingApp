@@ -18,6 +18,8 @@ import com.chndr.movieapp.model.Film
 import com.chndr.movieapp.utils.Preferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_dashboard.*
+import kotlinx.android.synthetic.main.fragment_dashboard.iv_profile
+import kotlinx.android.synthetic.main.fragment_setting.*
 import java.text.NumberFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -70,10 +72,15 @@ class DashboardFragment : Fragment() {
         if (!preferences.getValues("saldo").equals("")){
             currency(preferences.getValues("saldo")!!.toDouble(), tv_saldo)
         }
-        Glide.with(this)
-            .load(preferences.getValues("url"))
-            .apply(RequestOptions.circleCropTransform())
-            .into(iv_profile)
+        if(preferences.getValues("url") != ""){
+            Glide.with(this)
+                .load(preferences.getValues("url"))
+                .apply(RequestOptions.circleCropTransform())
+                .into(iv_profile)
+        }else{
+            iv_profile.setImageResource(R.drawable.user_pic)
+        }
+
 
         rv_now_playing.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         rv_coming_soon.layoutManager = LinearLayoutManager(context)

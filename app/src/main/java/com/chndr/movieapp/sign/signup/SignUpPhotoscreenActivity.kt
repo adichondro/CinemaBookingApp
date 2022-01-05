@@ -1,5 +1,6 @@
 package com.chndr.movieapp.sign.signup
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -41,6 +42,7 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
     private lateinit var mFirebaseDatabase: DatabaseReference
     private lateinit var mFirebaseInstance: FirebaseDatabase
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_photoscreen)
@@ -75,18 +77,18 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
         btn_home.setOnClickListener {
             finishAffinity()
 
-            var goHome = Intent(this@SignUpPhotoscreenActivity, HomeActivity::class.java)
+            val goHome = Intent(this@SignUpPhotoscreenActivity, HomeActivity::class.java)
             startActivity(goHome)
         }
 
 
         btn_save.setOnClickListener {
             if (filePath != null) {
-                var progressDialog = ProgressDialog(this)
+                val progressDialog = ProgressDialog(this)
                 progressDialog.setTitle("Uploading...")
                 progressDialog.show()
 
-                var ref = storageReference.child("images/" + UUID.randomUUID().toString())
+                val ref = storageReference.child("images/" + UUID.randomUUID().toString())
                 ref.putFile(filePath)
                     .addOnSuccessListener {
                         progressDialog.dismiss()
@@ -101,7 +103,7 @@ class SignUpPhotoscreenActivity : AppCompatActivity(), PermissionListener {
                         Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
                     }
                     .addOnProgressListener { taskSnapshot ->
-                        var progress =
+                        val progress =
                             100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
                         progressDialog.setMessage("Upload " + progress.toInt() + " %")
                     }

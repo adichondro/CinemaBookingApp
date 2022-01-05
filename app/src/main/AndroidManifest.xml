@@ -24,6 +24,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieApp">
         <activity
+            android:name=".home.setting.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.setting.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".home.tiket.TiketActivity"
             android:exported="false" />
         <activity
@@ -59,7 +65,9 @@
         <activity
             android:name=".sign.signup.SignUpPhotoscreenActivity"
             android:exported="true" />
-        <activity android:name=".SplashScreenActivity">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
